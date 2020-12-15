@@ -7,7 +7,7 @@ class Api::V1::PeopleController < ApplicationController
 
   def show
     unless @person
-      render json: { error: "Couldn't find Person with 'id'=#{params[:id]}" }, status: 404
+      render json: { error: "Couldn't find Person with 'id'=#{params[:id]}" }, status: :not_found
     end
   end
 
