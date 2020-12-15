@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'cities/index'
       get 'companies/index'
       get 'people/index'
+      get 'people/:id', to: "people#show"
     end
   end
 end
